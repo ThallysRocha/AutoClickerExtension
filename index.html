@@ -4,28 +4,34 @@
 <div class="container">
   <div>
     <div class="title">AutoClicker</div>
-    <div>
-      <div>Intervalo de cliques</div>
-      <div>
-        <div>Intervalo:</div>
+    <div class="interval-title">Intervalo de cliques</div>
+    <div class="interval">
+      
+      <div class="interval-body">
+        <div id="interval-title">Intervalo:</div>
         <input id="interval" type="number" min="1" value="2">  
       </div>
-      <div>
-        <div>Unidade do Intervalo:</div>
+
+      <div>Unidade do Intervalo:</div>
+      <div class="unit">
         <select name="unit" id="unit">
           <option value="seconds">Segundos</option>
           <option value="miliseconds">Milisegundos</option>
           <option value="minutes">Minutos</option>
         </select>
       </div>
+
     </div>
-    <div>
-      <div>Repetições de Cliques</div>
-      <div>
+
+    <div>Repetições de Cliques</div>
+    <div class="repetitions">
+
+      <div class="repetitions-body">
         <div>Repetir por:</div>
         <input id="repetitions" type="number" min="1" value="5">  
       </div>
-      <div>
+
+      <div class="neverStop">
         <div>Nunca Parar:</div>
         <select name="neverStop" id="neverStop">
           <option value="false">Não</option>
@@ -34,7 +40,10 @@
       </div>
        
     </div>
-    <button id="stop">Parar</button>    
-    <button id="start">Começar</button>
+    <div class="buttons">
+      <button id="stop">Parar</button>    
+      <button id="start">Começar</button>
+      
+    </div>
   </div>
 </div>

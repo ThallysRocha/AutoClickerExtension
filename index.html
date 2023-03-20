@@ -1,9 +1,40 @@
 <link href="popup.css" rel="stylesheet" type="text/css" />
 <script type="module" src="popup.js"></script>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="container">
   <div>
-    <div class="title">AutoClicker</div>    
-    <button id="myButton">clicou</button>
+    <div class="title">AutoClicker</div>
+    <div>
+      <div>Intervalo de cliques</div>
+      <div>
+        <div>Intervalo:</div>
+        <input id="interval" type="number" min="1" value="2">  
+      </div>
+      <div>
+        <div>Unidade do Intervalo:</div>
+        <select name="unit" id="unit">
+          <option value="seconds">Segundos</option>
+          <option value="miliseconds">Milisegundos</option>
+          <option value="minutes">Minutos</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <div>Repetições de Cliques</div>
+      <div>
+        <div>Repetir por:</div>
+        <input id="repetitions" type="number" min="1" value="5">  
+      </div>
+      <div>
+        <div>Nunca Parar:</div>
+        <select name="neverStop" id="neverStop">
+          <option value="false">Não</option>
+          <option value="true">Sim</option>
+        </select>  
+      </div>
+       
+    </div>
+    <button id="stop">Parar</button>    
+    <button id="start">Começar</button>
   </div>
 </div>

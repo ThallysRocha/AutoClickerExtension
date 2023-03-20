@@ -1,31 +1,43 @@
 (()=>{
+    let intervalId;
     chrome.runtime.onMessage.addListener((obj,sender,response)=>{
-        const {type, interval, times} = obj
-        console.log(obj)
-        if(type === "CLICK"){
-            
-            let likeButton = document.getElementsByClassName("button")[3]
-            if(likeButton){
+        const {type, interval, repetittions, neverStop} = obj
+        //console.log(obj)
+        
+        let likeButton = document.getElementsByClassName("button")[3]
+        if(likeButton){
+            if(type === "START"){
                 let i = 0
-                let id = setInterval(click, interval);
+                if(intervalId) clearInterval(intervalId)
+
+                intervalId = setInterval(click, interval)
                 function click() {
-                    if(i < times){
-                        likeButton.click()
-                        i++ 
+                    if(!neverStop){
+                        if(i < repetittions){
+                            likeButton.click()
+                            i++ 
+                        }
+                        else{
+                            clearInterval(intervalId)
+                            intervalId = null
+                        }
                     }
                     else{
-                        clearInterval(id)
-                    }                           
+                        likeButton.click()
+                    }
                     
-                }
-                
+                }                
             }
-            else{
-                console.log("botão não está presente")
+            else if (type === "STOP"){
+                if(intervalId){
+                    clearInterval(intervalId)
+                    intervalId = null   
+                }
+                 
             }
         }
-        else if(type == "NEW"){
-            console.log("NEW")
+        else{
+            console.log("botão não está presente")
         }
     })           
     

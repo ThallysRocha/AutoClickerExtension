@@ -1,0 +1,22 @@
+{
+    "name": "AutoClicker",
+    "version": "1.0.0",
+    "description": "",
+    "manifest_version": 3,
+    "author": "Thallys Rocha",
+    "host_permissions": ["<all_urls>"],
+    "permissions": ["storage", "tabs"],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "AutoClicker"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ]
+}

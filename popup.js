@@ -27,7 +27,7 @@ const clicking = async (type) => {
             type: type,
             interval: intervalValue,
             repetitions: repetitionsValue,
-            neverStop: JSON.parse(neverStop.value),
+            neverStop: JSON.parse(neverStop.checked),
         })
 
     }
@@ -35,11 +35,14 @@ const clicking = async (type) => {
 const neverStopOnChange = () => {
     const neverStop = document.getElementById("neverStop")
     const repetitions = document.getElementById("repetitions")
-    if(JSON.parse(neverStop.value) == true){        
+    const repetitionsLabel = document.getElementById("repetitions-label")
+    if(JSON.parse(neverStop.checked) == true){        
         repetitions.disabled = true
+        repetitionsLabel.style = "opacity:.5"
     }
     else{
         repetitions.disabled = false
+        repetitionsLabel.style = "opacity:1"
     }
 }
 document.getElementById("neverStop").addEventListener("change", neverStopOnChange);

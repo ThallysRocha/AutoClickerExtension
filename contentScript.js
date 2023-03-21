@@ -5,6 +5,7 @@
         //console.log(obj)
         
         let likeButton = document.getElementsByClassName("button")[3]
+        //let likeButton = document.getElementsByClassName("ytd-logo")[0]
         if(likeButton){
             if(type === "START"){
                 let i = 0

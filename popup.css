@@ -1,9 +1,11 @@
 .container{
     display: flex;
-    width: 350px;
+    width: 250px;
     justify-content: center;
     background-color: #FFFFFF;
     color: #303742;
+    flex-direction: column;
+    font-family: "Codec cold",sans-serif;
 }
 .interval{
     height: 50px;
@@ -12,16 +14,26 @@
     align-items: center;
     border: solid 1px #26e7c7;
     margin: 5px;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    
+    padding: 0px 20px 0px 20px;
 }
 .interval-body{
     display: flex;
-    margin: 5px;
+    justify-content: center;
 
 }
+input,select{
+    
+    height: 20px;
+}
+
+.interval-title{
+    justify-items: center;
+}
 .interval #interval{
-    margin-left: 5px;
-    width: 50px;
+    width: 65px;
+    text-align: right;
 }
 .unit-body{
     display: flex;
@@ -29,8 +41,6 @@
 }
 #unit{
     width: 100px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 .repetitions{
     height: 50px;
@@ -39,29 +49,40 @@
     align-items: center;
     border: solid 1px #26e7c7;   
     margin: 5px;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    
+    padding: 0px 20px 0px 20px;
 }
 .repetitions-body{
     display: flex;
-    margin-left: 5px;
+    width: 65px;
+    flex-direction: column;
+}
+#repetitions-label,#neverStop-label{
+    font-size: 10px;
 }
 .neverStop{
     display: flex;
-    margin-left: 5px;
-    margin-right: 5px;
+    flex-direction: column;
+    align-items: end;
+    width: 100px;
 }
 #repetitions{
-    margin-left: 5px;
+    margin: 3px 0px 0px 15px;
     width: 50px;
+    height: 20px;
+    text-align: end;
 }
 #neverStop{    
-    margin-left: 5px;
-    margin-right: 5px;
+    align-self: end;
+    width: 20px;
+    height: 20px;
+    margin: 3px 0px 0px 0px;
 }
 .buttons{
     
     margin: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;

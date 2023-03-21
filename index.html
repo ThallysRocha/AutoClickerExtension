@@ -2,17 +2,14 @@
 <script type="module" src="popup.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="container">
-  <div>
     <div class="title">AutoClicker</div>
-    <div class="interval-title">Intervalo de cliques</div>
+    <div class="interval-title">Intervalo de Cliques</div>
     <div class="interval">
       
       <div class="interval-body">
-        <div id="interval-title">Intervalo:</div>
         <input id="interval" type="number" min="1" value="2">  
       </div>
 
-      <div>Unidade do Intervalo:</div>
       <div class="unit">
         <select name="unit" id="unit">
           <option value="seconds">Segundos</option>
@@ -27,16 +24,13 @@
     <div class="repetitions">
 
       <div class="repetitions-body">
-        <div>Repetir por:</div>
+        <div id="repetitions-label">Repetir por:</div>
         <input id="repetitions" type="number" min="1" value="5">  
       </div>
 
       <div class="neverStop">
-        <div>Nunca Parar:</div>
-        <select name="neverStop" id="neverStop">
-          <option value="false">Não</option>
-          <option value="true">Sim</option>
-        </select>  
+        <div id="neverStop-label">Não parar:</div>
+        <input type="checkbox" id="neverStop">  
       </div>
        
     </div>
@@ -45,5 +39,4 @@
       <button id="start">Começar</button>
       
     </div>
-  </div>
 </div>

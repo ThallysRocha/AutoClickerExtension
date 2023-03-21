@@ -1,5 +1,5 @@
 {
-    "name": "AutoClicker",
+    "name": "Maquina da conquista",
     "version": "1.0.0",
     "description": "",
     "manifest_version": 3,
@@ -8,7 +8,10 @@
     "permissions": ["tabs"],
     "action":{
         "default_popup": "index.html",
-        "default_title": "AutoClicker"
+        "default_title": "Maquina da conquista"
+    },
+    "icons":{
+      "128": "icon128.png"
     },
     "content_scripts": [
       {

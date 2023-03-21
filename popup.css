@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: solid 1px #303742;
+    border: solid 1px #26e7c7;
     margin: 5px;
     justify-content: space-between;
 }
@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: solid 1px #303742;   
+    border: solid 1px #26e7c7;   
     margin: 5px;
     justify-content: space-between;
 }
@@ -69,4 +69,77 @@
 }
 .title{
     text-align: center;
+    background-image: linear-gradient(135deg, #fd5365 40%, #fc9842);
+    height: 40px;
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    
+}
+#stop{
+    align-items: center;
+    background-image: linear-gradient(135deg, #fd5365 40%, #fc9842);
+    border: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-family: "Codec cold",sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    height: 54px;
+    justify-content: center;
+    letter-spacing: .4px;
+    line-height: 1;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+#stop:hover{
+    transform: scale(.9);
+    opacity: .75;
+}
+#start{
+    align-items: center;
+    background-image: linear-gradient(135deg, #26e7c7 40%, #88c0ac);
+    border: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-family: "Codec cold",sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    height: 54px;
+    justify-content: center;
+    letter-spacing: .4px;
+    line-height: 1;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+#start:hover{
+    transform: scale(.9);
+    opacity: .75;
 }

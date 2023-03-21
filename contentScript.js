@@ -10,8 +10,8 @@
             if(type === "START"){
                 let i = 0
                 if(intervalId) clearInterval(intervalId)
-
-                intervalId = setInterval(click, interval)
+                let delay = interval + 300*(Math.random())
+                intervalId = setInterval(click, delay)
                 function click() {
                     if(!neverStop){
                         if(i < repetitions){

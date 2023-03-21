@@ -1,7 +1,7 @@
 (()=>{
     let intervalId;
     chrome.runtime.onMessage.addListener((obj,sender,response)=>{
-        const {type, interval, repetittions, neverStop} = obj
+        const {type, interval, repetitions, neverStop} = obj
         //console.log(obj)
         
         let likeButton = document.getElementsByClassName("button")[3]
@@ -13,7 +13,7 @@
                 intervalId = setInterval(click, interval)
                 function click() {
                     if(!neverStop){
-                        if(i < repetittions){
+                        if(i < repetitions){
                             likeButton.click()
                             i++ 
                         }

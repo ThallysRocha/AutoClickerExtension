@@ -14,6 +14,7 @@ const clicking = async (type) => {
         const unit = document.getElementById("unit")
         const repetitions = document.getElementById("repetitions")
         const neverStop = document.getElementById("neverStop")
+        const random = document.getElementById("random")
         let intervalValue = JSON.parse(interval.value)
         let repetitionsValue = JSON.parse(repetitions.value)
         if (unit.value == "seconds") {
@@ -28,6 +29,7 @@ const clicking = async (type) => {
             interval: intervalValue,
             repetitions: repetitionsValue,
             neverStop: JSON.parse(neverStop.checked),
+            random: JSON.parse(random.checked),
         })
 
     }
@@ -45,6 +47,21 @@ const neverStopOnChange = () => {
         repetitionsLabel.style = "opacity:1"
     }
 }
+const randomOnChange = () => {
+    const random = document.getElementById("random")
+    const interval = document.getElementById("interval")
+    const unit = document.getElementById("unit")
+    if(JSON.parse(random.checked) == true){        
+        interval.disabled = true
+        unit.disabled = true
+        
+    }
+    else{
+        interval.disabled = false
+        unit.disabled = false
+    }
+}
+document.getElementById("random").addEventListener("change", randomOnChange);
 document.getElementById("neverStop").addEventListener("change", neverStopOnChange);
 document.getElementById("stop").addEventListener("click",()=>{clicking("STOP")});
 document.getElementById("start").addEventListener("click",()=>{clicking("START")});

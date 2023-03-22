@@ -58,14 +58,8 @@ input,select{
     width: 65px;
     flex-direction: column;
 }
-#repetitions-label,#neverStop-label{
+#repetitions-label,#neverStop-label,#random-label{
     font-size: 10px;
-}
-.neverStop{
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    width: 100px;
 }
 #repetitions{
     margin: 3px 0px 0px 15px;
@@ -73,7 +67,17 @@ input,select{
     height: 20px;
     text-align: end;
 }
-#neverStop{    
+.checkboxes{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100px;
+}
+.random-body,.neverStop-body{
+    display: flex;
+    flex-direction: column;
+}
+#random,#neverStop{    
     align-self: end;
     width: 20px;
     height: 20px;

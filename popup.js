@@ -1,6 +1,5 @@
+
 import { getActiveTabURL } from "./utils.js";
-
-
 const clicking = async (type) => {
     //console.log("clicou")
     const activeTab = await getActiveTabURL()

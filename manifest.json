@@ -1,6 +1,6 @@
 {
-    "name": "Maquina da conquista",
-    "version": "1.0.0",
+    "name": "Robô do Tinder",
+    "version": "2.0.0",
     "description": "",
     "manifest_version": 3,
     "author": "Thallys Rocha",
@@ -8,7 +8,7 @@
     "permissions": ["tabs"],
     "action":{
         "default_popup": "index.html",
-        "default_title": "Maquina da conquista"
+        "default_title": "Robô do Tinder"
     },
     "icons":{
       "128": "icon128.png"
